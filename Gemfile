@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 # gem 'mysql2'
-gem 'pg'
+
 #gem 'activeadmin', github: 'activeadmin'
 
 gem 'devise'
@@ -47,5 +47,16 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'rails_12factor', group: :production
 gem 'debugger', group: [:development, :test]
+
+
+group :development do
+	gem 'mysql2'
+end
+
+group :production do
+	gem 'thin'
+	gem 'pg'
+end
+gem 'heroku'
+gem 'rails_12factor', group: :production
