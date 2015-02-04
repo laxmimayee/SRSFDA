@@ -27,5 +27,6 @@ module Srsfda
     app_config = settings['common'] || {}
     app_config.update(settings[Rails.env] || {})
     ::AppConfig = OpenStruct.new(app_config)
+    config.assets.initialize_on_precompile = false
   end
 end
