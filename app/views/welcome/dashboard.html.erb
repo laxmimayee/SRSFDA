@@ -1,0 +1,69 @@
+<div class="row-fluid">
+  <div class="span3">
+    <div id='cssmenu'>
+      <ul>
+         <li class='active'>
+          <%= link_to '<i class="icon-home"></i>&nbsp;Dashboard'.html_safe, welcome_dashboard_path, :method => :get, :remote =>true %>
+        </li>
+
+         <li class='last'>
+          <%= link_to '<i class="icon-user"></i>&nbsp;Profile'.html_safe, users_profile_path, :method => :get, :remote =>true %>
+        </li>
+        
+         <li class='has-sub'><a href='#'><i class="icon-fullscreen"></i>&nbsp;DB Updates</a>
+            <ul>
+               <li><a href='#'><span>Fundamental Analysis</span></a></li>
+               <li><a href='#'><span>Technical Analysis</span></a></li>
+               <% if user_signed_in? && current_user.role == "admin"%>
+                 <li>
+                  <%= link_to 'Update Options DB', reports_db_upload_path, :method => :get, :remote =>true %>
+                 </li>
+               <% end %>
+               <li class='last'><a href='#'><span>Pairs Analysis</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><i class="icon-fullscreen"></i>&nbsp;Screeners</a>
+            <ul>
+               <li><a href='#'><span>Fundamental Analysis</span></a></li>
+               <li><a href='#'><span>Technical Analysis</span></a></li>
+               <li><%= link_to "Optional Analysis", welcome_optional_path , :method => :get, :remote =>true %></li>
+               <li class='last'><a href='#'><span>Pairs Analysis</span></a></li>
+            </ul>
+         </li>
+         <li class='has-sub'><a href='#'><i class="icon-th"></i>&nbsp;Analytics</a>
+            <ul>
+               <li><a href='#'><span>Fundamental Analysis</span></a></li>
+               <li><a href='#'><span>Technical Analysis</span></a></li>
+               <li><a href='#'><span>Optional Analysis</span></a></li>
+               <li class='last'><a href='#'><span>Pairs Analysis</span></a></li>
+            </ul>
+         </li>
+         <li class='last'><%= link_to '<i class="icon-cog"></i>&nbsp;Settings'.html_safe, users_settings_path, :method => :get, :remote =>true %></li>
+      </ul>
+    </div>
+    <!-- <div class="sidebar-nav">
+        <div class="well">
+            <ul class="nav nav-list">        
+              <li style="height: 30px; margin: 10px">
+
+                <%= link_to '<i class="icon-home"></i>Dashboard'.html_safe, welcome_dashboard_path, :method => :get, :remote =>true %></li>
+              <li class="divider"></li>
+              <li style="height: 30px; margin: 10px">
+                <%= link_to '<i class="icon-envelope"></i>Profile'.html_safe, users_profile_path, :method => :get, :remote =>true %>
+              <li class="divider"></li>
+              <li  style="height: 30px; margin: 10px">
+                <%= link_to '<i class="icon-comment"></i>Reports'.html_safe, reports_index_path, :method => :get, :remote =>true %></li>
+              <li class="divider"></li>
+              
+              <li style="height: 30px; margin: 10px">
+                <%= link_to '<i class="icon-cog"></i>Settings'.html_safe, users_settings_path, :method => :get, :remote =>true %></li>
+            </ul>
+        </div>
+    </div> -->
+  </div>
+
+  
+  <div class="span7 box3">
+    <%= render '/reports/index' %>
+</div>
+</div>

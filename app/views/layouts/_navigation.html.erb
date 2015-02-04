@@ -1,0 +1,94 @@
+
+<div class="navbar navbar-fixed-top"> 
+    
+    <div align="left" class="header">
+      <div class="container">
+        <div class="pull-right">
+          <ul class="nav-top">
+            <li><%= link_to "Reach Us", "#" %></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><%= link_to "Registration", new_user_registration_path %></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><%= link_to "Login", new_user_session_path %></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="span4"><%= link_to image_tag('logo.png'), root_path %></div>
+          <div class="span6">
+            <span class="pull-right" id="header-title">
+              Integrated<font color="#F7814D">Investor</font>
+              <p class="header-sub">The Ultimate Trade Finder</p>
+            </span>
+          </div>
+        </div>
+     </div>
+    </div>
+  <div class="navbar-inner">
+    <div class="container">
+       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a> 
+      <div class="nav-collapse collapse pull-right">
+        <ul class="nav pull-right">
+          <li><%= link_to "HOME", "#home" %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">SCREENERS </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Fundamental Analysis</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Technical Analysis</a></li>
+               <li class="divider"></li>
+              <li><%= link_to "Optional Analysis", welcome_optional_path%></li>
+              <li class="divider"></li>
+              <li><a href="#">Pairs Analysis</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ANALYTICS </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Fundamental Analysis</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Technical Analysis</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Optional Analysis</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Pairs Analysis</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MY ACCOUNT </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Dashboard</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Watch List</a></li>
+               <li class="divider"></li>
+              <li><a href="#">MyScreens</a></li>
+              <li class="divider"></li>
+              <li><a href="#">My Portfolio</a></li>
+            </ul>
+          </li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OUR IDEAS </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Trade Ideas</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Strategies & Performance</a></li>
+              
+            </ul>
+          </li>
+           <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ABOUT US </span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#firm">Our Firm</a></li>
+               <li class="divider"></li>
+              <li><a href="#">Wealth Management</a></li>
+            </ul>
+          </li>
+
+
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+
+<div class="slider-box" id="home">
+  <div id="da-slider" class="da-slider">
+    <div class="da-slide">
+      <h2>Easy management</h2>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+      
+      <div class="da-img"><%= image_tag "6.png" %></div>
+    </div>
+    <div class="da-slide">
+      <h2>Revolution</h2>
+      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+      <div class="da-img"><%= image_tag "2.png" %></div>
+    </div>
+    <div class="da-slide">
+      <h2>Warm welcome</h2>
+      <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+      
+      <div class="da-img"><%= image_tag "7.png" %></div>
+    </div>
+    <div class="da-slide">
+      <h2>Quality Control</h2>
+      <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+      <div class="da-img"><%= image_tag "5.png" %></div>
+    </div>
+    <nav class="da-arrows">
+      <span class="da-arrows-prev"></span>
+      <span class="da-arrows-next"></span>
+    </nav>
+  </div>
+  <div style="margin-left:1%;">
+    <div class="row">
+      <div class="span5 box4"><%= image_tag "chart1.png"%></div>
+      <div class="span5 box4">
+        <p style="  font-size: 18px; line-height: 39px; padding: 30px;"><b>Knowledge is power</b> – that’s why it’s essential that you know all you can about your company of interest. Our News feature makes this possible at the click of a button
+
+</p>
+      </div>
+    <div>
+  </div>
+  
+
+</div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.cslider.js"></script>
+    <script type="text/javascript">
+      $(function() {
+      
+        $('#da-slider').cslider({
+          autoplay  : true,
+          bgincrement : 450
+        });
+      
+      });
+    </script> 
+
+
+            
+    <div id="tools">
+      <%#= render '/welcome/tools' %>
+    </div>
+    <div id="firm">
+        <%= render '/welcome/about' %>
+    </div>  
+
+
+
+

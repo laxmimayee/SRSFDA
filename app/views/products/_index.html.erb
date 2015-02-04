@@ -1,0 +1,72 @@
+<h3>Reports</h3>
+<%# if user_signed_in? && current_user.role == "admin" %>
+<h4></h4>
+
+<%= search_form_for @search, :method => :get, :remote =>true do |f| %>
+ 
+    <%= f.label :name, "Product Search" %>
+    <%#= f.text_field :name %>
+    
+
+    <%#= select_tag :name, options_for_select(Product.all.collect {|p| [p.name,p.id]})  %>
+    <%= f.collection_select :name, Product.all, "name", "name", :prompt => "Select Symbol" %>
+    <%#= f.label :price_lteq, "Product Search" %>
+    <%#= f.select :price, options_from_collection_for_select(Product.select(:price).distinct, "price", "price", @search.price), :prompt => "Select price" %>
+     <%#= f.select :Trend_MA, options_from_collection_for_select(Product.select(:Trend_MA).distinct, "Trend_MA", "Trend_MA", @search.price), :prompt => "Trend" %>
+    
+ &nbsp;&nbsp;&nbsp;
+ <%= f.submit "Search", :class => "btn btn-custom", :name => nil %>
+
+  
+<% end %>
+
+<table>
+  <tr>
+    <th>Product Name</th>
+    <th>Release Date</th>
+    <th>Price</th>
+    <th>Trend</th>
+  </tr>
+
+<% @products.each do |p| %>
+  <tr>
+    <td><%= p.name %></td>
+    <td><%= p.date%></td>
+    <td><%= p.price %></td>
+    <td><%= p.TREND%></td>
+  </tr>
+<% end %>
+</table>
+
+<style>
+table { 
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
+text-align: center; 
+}
+
+td, th { 
+border: 1px solid transparent; 
+border-radius: 3px;
+height: 30px; 
+transition: all 0.3s; }
+
+th {
+background: #333;  
+font-weight: bold;
+color: #fff;  
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: #666; color: #FFF; } 
+</style>
